@@ -1,0 +1,26 @@
+.card{
+    width: 400px;
+    height: 500px;
+    border: 2px solid darkslategray;
+    background-color: aquamarine;
+    overflow: hidden;
+    margin: 1rem 1rem;
+    border-start-end-radius: 2rem;
+    border-start-start-radius: 2rem;
+    padding: 0 1rem;
+}
+.card img{
+    width: 300px;
+    object-fit: contain;
+}
+.card button{
+    background-color: coral;
+    padding: 0.5rem 1.5rem;
+    margin: 1rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.card button:hover{
+    background-color: rgb(190, 70, 27);
+}
