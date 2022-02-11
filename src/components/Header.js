@@ -14,8 +14,11 @@ function Header() {
           <p className="menu">Home</p>
         </Link>
 
-        <Link to="/fav">
+        <Link to="/search">
           <p className="menu">Search</p>
+        </Link>
+        <Link to="/fav">
+          <p className="menu">Favourite</p>
         </Link>
       </div>
       <div>

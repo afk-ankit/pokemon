@@ -15,8 +15,8 @@ const Card = ({ item }) => {
         id: source.id,
       },
     });
-    // console.log(basket);
   };
+  // console.log(basket);
 
   let [source, setsource] = useState(0);
   //   console.log(item);
