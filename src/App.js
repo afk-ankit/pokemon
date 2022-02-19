@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Fav from "./components/Fav";
 import Count from "./Count";
 import Favourite from "./components/Favourite";
+import Swiper from "./components/Swiper.js";
 
 function App() {
   const [data, setdata] = useState(0);
@@ -20,21 +21,17 @@ function App() {
   }, []);
 
   return (
-   
-      <Router>
-        <div className="App">
-          <Header />
-          {/* <Count/> */}
-          <Routes>
-            <Route path="/" element={ data && <Cardlist data={data} />}/>
-            <Route path="/search" element={<Fav/>}/>
-            <Route path="/fav" element={<Favourite/>}/>
-          </Routes>
-        </div>
-      </Router>
-    
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={data && <Cardlist data={data} />} />
+          <Route path="/search" element={<Fav />} />
+          <Route path="/fav" element={<Favourite />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
 export default App;
-
