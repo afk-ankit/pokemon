@@ -2,8 +2,18 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import "./Card.css";
 import { useStateValue } from "./StateProvider";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Card = ({ item }) => {
+  useEffect(() => {
+    fetch(item.url)
+      .then((data) => data.json())
+      .then((json) => setsource(json));
+
+    AOS.init();
+  }, []);
+
   const [{ basket }, dispatch] = useStateValue();
 
   const addtofav = () => {
@@ -20,15 +30,10 @@ const Card = ({ item }) => {
 
   let [source, setsource] = useState(0);
   //   console.log(item);
-  useEffect(() => {
-    fetch(item.url)
-      .then((data) => data.json())
-      .then((json) => setsource(json));
-  }, []);
 
   // console.log(source);
   return (
-    <div className="card">
+    <div data-aos="fade-left" className="card">
       {source && (
         <>
           <h1>{item.name}</h1>
